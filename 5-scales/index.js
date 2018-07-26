@@ -12,6 +12,8 @@ var svg = d3.select('svg')
     .attr('height', svgHeight)
 
 // adding y scale
+// "D3 creates a function myScale which accepts input between 0 and n (the domain) 
+// and maps it to output between 0 and m (the range)."
 var yScale = d3.scaleLinear()
     .domain([0, d3.max(dataset)])   // domain takes array as element, first is 0, second is max # in data set
     .range([0, svgHeight])          // range takes scale values within range of svg container...
