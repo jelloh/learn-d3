@@ -1,6 +1,7 @@
 // javascript
 //var dataset = [80, 100, 56, 120, 180, 30, 40, 120, 160]
-var dataset = [1, 2, 3, 4, 5]
+//var dataset = [1, 2, 3, 4, 5]
+var dataset = [3, 100, 53, 25, 86, 1, 12, 34]
 
 var svgWidth = 500, svgHeight = 300, barPadding = 1
 var barWidth = (svgWidth / dataset.length) 
@@ -38,13 +39,13 @@ var text = svg.selectAll('text')
     .enter()
     .append('text')
     .text(function(d) {
-        return d
+        return d    // yScale this... jk dont yScale this, this is the text value lOLOL oops
     })
     .attr('y', function(d, i){
-        return svgHeight - d - 2;
+        return svgHeight - yScale(d) - 2;   // and yScale this too. yScale everything!!!~
     })
     .attr('x', function(d, i){
-        return (barWidth * i) + (barWidth / 4)
+        return (barWidth * i)
     })
     
 
